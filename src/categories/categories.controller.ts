@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
 import { Category } from './interfaces/category.interface';
 import * as fs from 'fs';
+import * as path from 'path';
 
 @Controller('categories')
 export class CategoriesController {
@@ -24,7 +25,9 @@ export class CategoriesController {
 
   @Post('import')
   async importCategories(): Promise<Category[]> {
-    const categories = JSON.parse(fs.readFileSync('categories.json', 'utf-8'));
+    const jsonPath = path.join(process.cwd(), 'categories.json');
+    const rawData = fs.readFileSync(jsonPath, 'utf-8');
+    const categories = JSON.parse(rawData);
     return this.categoriesService.bulkCreate(categories);
   }
 }
