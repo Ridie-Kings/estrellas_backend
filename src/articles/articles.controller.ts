@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { ArticlesService } from './articles.service';
 import { Article } from './interfaces/article.interface';
 
+
 @Controller('articles')
 export class ArticlesController {
   constructor(private readonly articlesService: ArticlesService) {}
@@ -12,7 +13,7 @@ export class ArticlesController {
   }
 
   @Get(':slug')
-  async findOne(@Param('slug') slug: string): Promise<Article> {
+  async findOne(@Param('slug') slug: string): Promise<Article | null> {
     return this.articlesService.findOne(slug);
   }
 
@@ -22,8 +23,7 @@ export class ArticlesController {
   }
 
   @Post('import')
-  async import(@Body() articles: Article[]): Promise<any> {
+  async import(@Body() articles: Article[]): Promise<Article[]> {
     return this.articlesService.bulkCreate(articles);
   }
 }
-

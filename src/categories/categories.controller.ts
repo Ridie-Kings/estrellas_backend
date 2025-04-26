@@ -1,8 +1,7 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
 import { Category } from './interfaces/category.interface';
-import fs from 'fs';
-
+import * as fs from 'fs';
 
 @Controller('categories')
 export class CategoriesController {
@@ -14,7 +13,7 @@ export class CategoriesController {
   }
 
   @Get(':slug')
-  async findOne(@Param('slug') slug: string): Promise<Category> {
+  async findOne(@Param('slug') slug: string): Promise<Category | null> {
     return this.categoriesService.findOne(slug);
   }
 
@@ -24,9 +23,8 @@ export class CategoriesController {
   }
 
   @Post('import')
-  async importCategories(): Promise<any> {
-	  const categories = JSON.parse(fs.readFileSync('categories.json', 'utf-8'));
-	  return this.categoriesService.bulkCreate(categories);
+  async importCategories(): Promise<Category[]> {
+    const categories = JSON.parse(fs.readFileSync('categories.json', 'utf-8'));
+    return this.categoriesService.bulkCreate(categories);
   }
 }
-

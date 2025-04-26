@@ -13,7 +13,7 @@ export class CategoriesService {
     return this.categoryModel.find().exec();
   }
 
-  async findOne(slug: string): Promise<Category> {
+  async findOne(slug: string): Promise<Category | null> {
     return this.categoryModel.findOne({ slug }).exec();
   }
 
@@ -22,8 +22,7 @@ export class CategoriesService {
     return newCategory.save();
   }
 
-  async bulkCreate(categories: Category[]): Promise<any> {
-	  return this.categoryModel.insertMany(categories);
+  async bulkCreate(categories: Category[]): Promise<Category[]> {
+    return this.categoryModel.insertMany(categories);
   }
 }
-
