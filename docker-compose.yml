@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:5  # Usar la versión 5 de MongoDB
+    container_name: estrellas-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}  # Usuario root de MongoDB
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}  # Contraseña root de MongoDB
+      MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}  # Nombre de la base de datos
+    volumes:
+      - ./mongo:/data/db  # Persistencia de los datos en el host
+    networks:
+      - internal_network  # Red interna de Docker para seguridad
+    command: --bind_ip 127.0.0.1  # Solo permitir conexiones locales dentro de la red de Docker
+    ports:
+      - "127.0.0.1:27018:27017"  # Exponer MongoDB solo a localhost para mayor seguridad
+
+networks:
+  internal_network:
+    driver: bridge  # Red privada para los servicios de Docker

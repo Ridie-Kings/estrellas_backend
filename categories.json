@@ -1,0 +1,82 @@
+{
+    "name": "Constelaciones",
+    "slug": "constelaciones",
+    "description": "Conjunto de estrellas que forman patrones reconocibles."
+  },
+  {
+    "name": "Nebulosa",
+    "slug": "nebulosa",
+    "description": "Nubes de gas y polvo en el espacio."
+  },
+  {
+    "name": "Cuerpo Celeste",
+    "slug": "cuerpo-celeste",
+    "description": "Objetos como planetas, asteroides, cometas, etc., que existen en el espacio exterior."
+  },
+  {
+    "name": "Cosmos",
+    "slug": "cosmos",
+    "description": "El universo como un todo, incluyendo el espacio y todo lo que contiene."
+  },
+  {
+    "name": "Galaxia",
+    "slug": "galaxia",
+    "description": "Grandes sistemas de estrellas, gas y polvo que están unidos por la gravedad."
+  },
+  {
+    "name": "Satelites",
+    "slug": "satelites",
+    "description": "Objetos naturales o artificiales que orbitan alrededor de planetas."
+  },
+  {
+    "name": "Agujeros Negros",
+    "slug": "agujeros-negros",
+    "description": "Regiones en el espacio donde la gravedad es tan fuerte que nada, ni siquiera la luz, puede escapar."
+  },
+  {
+    "name": "Estrellas",
+    "slug": "estrellas",
+    "description": "Esferas de gas en el espacio que emiten luz y calor debido a las reacciones nucleares en su interior."
+  },
+  {
+    "name": "Universo",
+    "slug": "universo",
+    "description": "Todo lo que existe, incluyendo el espacio, las estrellas, los planetas y la materia."
+  },
+  {
+    "name": "Filosofía",
+    "slug": "filosofia",
+    "description": "El estudio de cuestiones fundamentales sobre la existencia, el conocimiento, la verdad y la moralidad."
+  },
+  {
+    "name": "Descubridores",
+    "slug": "descubridores",
+    "description": "Personas que han hecho importantes descubrimientos científicos en el campo de la astronomía."
+  },
+  {
+    "name": "La Ciencia Detrás de",
+    "slug": "la-ciencia-detras-de",
+    "description": "Explicaciones científicas de series, libros, películas y temas de actualidad."
+  },
+  {
+    "name": "Teología",
+    "slug": "teologia",
+    "description": "El estudio de lo divino y lo sagrado en relación con el universo."
+  },
+  {
+    "name": "Conceptos",
+    "slug": "conceptos",
+    "description": "Términos y definiciones relacionados con la astronomía."
+  },
+  {
+    "name": "Imágenes",
+    "slug": "imagenes",
+    "description": "Imágenes y fotos tomadas desde telescopios y misiones espaciales."
+  },
+  {
+    "name": "Videos",
+    "slug": "videos",
+    "description": "Material visual relacionado con la astronomía, como documentales o conferencias."
+  }
+]
+
