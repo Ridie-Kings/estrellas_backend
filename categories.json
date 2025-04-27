@@ -8,76 +8,91 @@
   {
     "name": "Nebulosa",
     "slug": "nebulosa",
+    "image": "https://cdn.pixabay.com/photo/2011/12/15/09/50/lagoon-nebula-11143_1280.jpg",
     "description": "Nubes de gas y polvo en el espacio."
   },
   {
     "name": "Cuerpo Celeste",
     "slug": "cuerpo-celeste",
+    "image": "https://cdn.pixabay.com/photo/2016/06/05/07/59/space-1436951_1280.jpg",
     "description": "Objetos como planetas, asteroides, cometas, etc., que existen en el espacio exterior."
   },
   {
     "name": "Cosmos",
     "slug": "cosmos",
+    "image": "https://cdn.pixabay.com/photo/2019/03/04/18/35/milky-way-4034930_1280.jpg",
     "description": "El universo como un todo, incluyendo el espacio y todo lo que contiene."
   },
   {
     "name": "Galaxia",
     "slug": "galaxia",
+    "image": "https://cdn.pixabay.com/photo/2012/11/28/10/16/stars-67616_1280.jpg",
     "description": "Grandes sistemas de estrellas, gas y polvo que están unidos por la gravedad."
   },
   {
     "name": "Satelites",
     "slug": "satelites",
+    "image": "https://cdn.pixabay.com/photo/2010/12/05/sputnik-986_1280.jpg",
     "description": "Objetos naturales o artificiales que orbitan alrededor de planetas."
   },
   {
     "name": "Agujeros Negros",
     "slug": "agujeros-negros",
+    "image": "https://cdn.pixabay.com/photo/2021/05/22/22/35/black-hole-6274731_1280.jpg",
     "description": "Regiones en el espacio donde la gravedad es tan fuerte que nada, ni siquiera la luz, puede escapar."
   },
   {
     "name": "Estrellas",
     "slug": "estrellas",
+    "image": "https://cdn.pixabay.com/photo/2016/07/09/14/28/space-1506349_1280.jpg",
     "description": "Esferas de gas en el espacio que emiten luz y calor debido a las reacciones nucleares en su interior."
   },
   {
     "name": "Universo",
     "slug": "universo",
+    "image": "https://cdn.pixabay.com/photo/2017/10/23/08/05/galaxy-2880359_1280.jpg",
     "description": "Todo lo que existe, incluyendo el espacio, las estrellas, los planetas y la materia."
   },
   {
     "name": "Filosofía",
     "slug": "filosofia",
+    "image": "https://cdn.pixabay.com/photo/2017/08/07/19/07/books-2606859_1280.jpg",
     "description": "El estudio de cuestiones fundamentales sobre la existencia, el conocimiento, la verdad y la moralidad."
   },
   {
     "name": "Descubridores",
     "slug": "descubridores",
+    "image": "https://cdn.pixabay.com/photo/2018/02/21/15/48/lisbon-3170674_1280.jpg",
     "description": "Personas que han hecho importantes descubrimientos científicos en el campo de la astronomía."
   },
   {
     "name": "La Ciencia Detrás de",
     "slug": "la-ciencia-detras-de",
+    "image": "https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188_1280.jpg",
     "description": "Explicaciones científicas de series, libros, películas y temas de actualidad."
   },
   {
     "name": "Teología",
     "slug": "teologia",
+    "image": "https://cdn.pixabay.com/photo/2013/11/03/12/31/the-aztec-calendar-204821_1280.jpg",
     "description": "El estudio de lo divino y lo sagrado en relación con el universo."
   },
   {
     "name": "Conceptos",
     "slug": "conceptos",
+    "image": "https://cdn.pixabay.com/photo/2012/11/28/10/35/rocket-launch-67646_1280.jpg",
     "description": "Términos y definiciones relacionados con la astronomía."
   },
   {
     "name": "Imágenes",
     "slug": "imagenes",
+    "image": "https://cdn.pixabay.com/photo/2022/04/02/11/21/night-7106775_1280.jpg",
     "description": "Imágenes y fotos tomadas desde telescopios y misiones espaciales."
   },
   {
     "name": "Videos",
     "slug": "videos",
+    "image": "https://cdn.pixabay.com/photo/2021/10/25/14/02/planet-6741027_1280.jpg",
     "description": "Material visual relacionado con la astronomía, como documentales o conferencias."
   }
 ]
