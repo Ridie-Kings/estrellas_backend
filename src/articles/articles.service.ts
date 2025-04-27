@@ -3,7 +3,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Article } from './interfaces/article.interface';
 
-
 @Injectable()
 export class ArticlesService {
   constructor(
@@ -23,7 +22,16 @@ export class ArticlesService {
     return newArticle.save();
   }
 
-  async bulkCreate(articles: Article[]): Promise<Article[]> {
-    return this.articleModel.insertMany(articles);
+  async bulkCreate(articles: any[]): Promise<Article[]> {
+    const formattedArticles = articles.map((article) => ({
+      ...article,
+      publishedAt: new Date(article.publishedAt),
+      metadata: {
+        wordpress_id: article.metadata.wordpress_id,
+        status: article.metadata.status,
+      },
+    }));
+
+    return this.articleModel.insertMany(formattedArticles, { ordered: false });
   }
 }

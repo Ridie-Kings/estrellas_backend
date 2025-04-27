@@ -1,7 +1,15 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  InternalServerErrorException,
+} from '@nestjs/common';
 import { ArticlesService } from './articles.service';
 import { Article } from './interfaces/article.interface';
-
+import * as fs from 'fs';
+import * as path from 'path';
 
 @Controller('articles')
 export class ArticlesController {
@@ -23,7 +31,20 @@ export class ArticlesController {
   }
 
   @Post('import')
-  async import(@Body() articles: Article[]): Promise<Article[]> {
-    return this.articlesService.bulkCreate(articles);
+  async importArticles() {
+    try {
+      const jsonPath = path.join(process.cwd(), 'articles.json');
+      const rawData = fs.readFileSync(jsonPath, 'utf-8');
+      const articles = JSON.parse(rawData);
+
+      const result = await this.articlesService.bulkCreate(articles);
+      return {
+        message: 'Importación exitosa',
+        insertedCount: result.length,
+      };
+    } catch (error) {
+      console.error('Error en importación:', error);
+      throw new InternalServerErrorException('Error al importar artículos');
+    }
   }
 }
