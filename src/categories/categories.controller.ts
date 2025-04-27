@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Patch, Body, Param } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
 import { Category } from './interfaces/category.interface';
 import * as fs from 'fs';
@@ -29,5 +29,13 @@ export class CategoriesController {
     const rawData = fs.readFileSync(jsonPath, 'utf-8');
     const categories = JSON.parse(rawData);
     return this.categoriesService.bulkCreate(categories);
+  }
+
+  @Patch(':slug')
+  async updateCategory(
+    @Param('slug') slug: string,
+    @Body() updateData: Partial<Category>,
+  ): Promise<Category | null> {
+    return this.categoriesService.update(slug, updateData);
   }
 }

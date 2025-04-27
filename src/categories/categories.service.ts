@@ -25,4 +25,13 @@ export class CategoriesService {
   async bulkCreate(categories: Category[]): Promise<Category[]> {
     return this.categoryModel.insertMany(categories);
   }
+
+  async update(
+    slug: string,
+    categoryData: Partial<Category>,
+  ): Promise<Category | null> {
+    return this.categoryModel
+      .findOneAndUpdate({ slug }, categoryData, { new: true })
+      .exec();
+  }
 }

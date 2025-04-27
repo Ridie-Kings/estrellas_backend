@@ -2,6 +2,7 @@
   {
     "name": "Constelaciones",
     "slug": "constelaciones",
+    "image": "https://cdn.pixabay.com/photo/2017/08/08/00/33/constellations-2609647_1280.jpg",
     "description": "Conjunto de estrellas que forman patrones reconocibles."
   },
   {
@@ -80,4 +81,3 @@
     "description": "Material visual relacionado con la astronomía, como documentales o conferencias."
   }
 ]
-
