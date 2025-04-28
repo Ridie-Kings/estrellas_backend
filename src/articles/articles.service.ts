@@ -23,8 +23,15 @@ export class ArticlesService {
   }
 
   async bulkCreate(articles: any[]): Promise<Article[]> {
+    console.log('Bulk creating articles:', articles);
+    
     const formattedArticles = articles.map((article) => ({
       ...article,
+      title: article.title,
+      content: article.content,
+      slug: article.slug,
+      categories: article.categories,
+      tags: article.tags,
       publishedAt: new Date(article.publishedAt),
       metadata: {
         wordpress_id: article.metadata.wordpress_id,
