@@ -4,7 +4,7 @@ export const ArticleSchema = new Schema({
   title: String,
   slug: String,
   content: String,
-  category: { type: Schema.Types.ObjectId, ref: 'Category' },
+  category: String,
   date: { type: Date, default: Date.now },
 });
 
