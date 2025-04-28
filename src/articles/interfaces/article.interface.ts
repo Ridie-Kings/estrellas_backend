@@ -4,7 +4,7 @@ export interface Article extends Document {
   title: string;
   slug: string;
   content: string;
-  category: string;
+  categories: string;
   date: Date;
 }
 

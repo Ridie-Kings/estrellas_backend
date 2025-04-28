@@ -4,7 +4,7 @@ export const ArticleSchema = new Schema({
   title: String,
   slug: String,
   content: String,
-  category: String,
+  categories: String,
   date: { type: Date, default: Date.now },
 });
 
