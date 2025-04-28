@@ -9,6 +9,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors();
+  app.use(express.json({ limit: '20mb' }));
+  app.use(express.urlencoded({ limit: '20mb', extended: true }));
 
   await app.listen(process.env.PORT ?? 4327);
 }

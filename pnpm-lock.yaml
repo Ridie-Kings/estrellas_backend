@@ -26,6 +26,9 @@ importers:
       dotenv:
         specifier: ^16.5.0
         version: 16.5.0
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
       mongoose:
         specifier: ^8.14.0
         version: 8.14.0
@@ -58,7 +61,7 @@ importers:
         specifier: ^1.10.7
         version: 1.11.22
       '@types/express':
-        specifier: ^5.0.0
+        specifier: ^5.0.1
         version: 5.0.1
       '@types/jest':
         specifier: ^29.5.14
